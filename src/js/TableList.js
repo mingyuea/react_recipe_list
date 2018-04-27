@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Tester extends React.Component{
+class TableList extends React.Component{
 	constructor(props){
 		super(props);
 
@@ -43,4 +43,4 @@ class Tester extends React.Component{
 	}
 }
 
-export default Tester;
+export default TableList;

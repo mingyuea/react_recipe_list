@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Tester from './Tester';
+import TableList from './TableList';
 import ChangeForm from './ChangeForm';
 
 class ListContainer extends React.Component{
@@ -104,7 +104,7 @@ class ListContainer extends React.Component{
 	render(){
 		let rendArr = [];
 		rendArr = this.state.recipes.map((recipe, ind) =>
-			<Tester key={ind} id={ind} tableName={recipe.recipeName} recipeData={recipe.ingredients} onClick={this.showTarget} onDel={this.deleteTable} onEdit={this.startEdit} />);
+			<TableList key={ind} id={ind} tableName={recipe.recipeName} recipeData={recipe.ingredients} onClick={this.showTarget} onDel={this.deleteTable} onEdit={this.startEdit} />);
 		
 
 		return(
