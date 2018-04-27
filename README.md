@@ -1,0 +1,1 @@
+This is  a recipe list written in React. It isn't yet stylized with CSS. The root parent component is ListContainer, and has two stateless child components for adding/editing recipes and displaying the existing recipes.
