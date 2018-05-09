@@ -21,20 +21,20 @@ class TableList extends React.Component{
 	render(){
 		let ingList = this.props.recipeData.map((elem, ind) => <li key={"tab"+this.props.id+"ing"+ind}>{elem}</li>);
 		return(
-			<table id={this.props.id}>
+			<table id={this.props.id} className="table">
 				<tbody>
 					<tr>
-						<td>Recipe</td>
-						<td>{this.props.tableName}</td>
-						<td>Ingredients</td>
-						<td>
+						<td><h5>{this.props.tableName}</h5></td>
+					</tr>
+					<tr>
+						<td>Ingredients:
 							<ul>{ingList}</ul>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<button onClick={this.handleDelete}>Delete Recipe</button>
-							<button onClick={this.handleChange}>Edit Recipe</button>
+							<button className="btn btn-primary" onClick={this.handleChange}>Edit Recipe</button>
+							<button className="btn btn-default" onClick={this.handleDelete}>Delete Recipe</button>
 						</td>
 					</tr>
 				</tbody>

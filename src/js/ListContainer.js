@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import TableList from './TableList';
 import ChangeForm from './ChangeForm';
+import Styles from '../css/ListContainer.css'
 
 class ListContainer extends React.Component{
 	constructor(props){
@@ -108,10 +109,12 @@ class ListContainer extends React.Component{
 		
 
 		return(
-			<div id="11"> Recipes List
+			<div id="11" className={Styles.listContainer}> 
+				<h1>Recipes List</h1>
+				<br />
 				{rendArr}
-				<button onClick={this.showForm}>Add Recipe</button>
-				<ChangeForm onFormSubmit={this.addRecipe} style={this.state.formDisplay} currTab={this.state.currentTable} onClear={this.clearForm} nameChange={this.formNameChange} dataChange={this.formDataChange} recipeName={this.state.formName} ingredients={this.state.formData} closeForm={this.hideForm} />
+				<button onClick={this.showForm} className="btn btn-primary">Add Recipe</button>
+				<ChangeForm id="changeForm" onFormSubmit={this.addRecipe} style={this.state.formDisplay} currTab={this.state.currentTable} onClear={this.clearForm} nameChange={this.formNameChange} dataChange={this.formDataChange} recipeName={this.state.formName} ingredients={this.state.formData} closeForm={this.hideForm} />
 			</div>
 		);
 	}

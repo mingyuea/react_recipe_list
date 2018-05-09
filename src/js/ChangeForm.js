@@ -1,4 +1,5 @@
 import React from 'react';
+import Styles from '../css/ChangeForm.css';
 
 class ChangeForm extends React.Component{
 	constructor(props){
@@ -51,18 +52,26 @@ class ChangeForm extends React.Component{
 	render(){
 
 		return(
-			<form onSubmit={this.handleSubmit} style={this.props.style}>
-				<label>
-					Recipe
-					<input type="text" value={this.props.recipeName} onChange={this.handleNameChange} />
-				</label>
-				<label>
-					Ingredients (seperated by commas)
-					<input type="text" value={this.props.ingredients} onChange={this.handleIngChange} />
-				</label>
-				<button onClick={this.handleClose}>Close</button>
-				<input type="submit" value="Submit" />
-			</form>
+			<div className={Styles.myFormContainer} style={this.props.style}>
+				<div className={Styles.myForm}>
+					<form onSubmit={this.handleSubmit} >
+						<div className="form-group">
+							<label>
+								Recipe Name: 
+							</label>
+							<input type="text" className="form-control" value={this.props.recipeName} onChange={this.handleNameChange} />
+						</div>
+						<div className="form-group">
+							<label>
+								Ingredients (seperated by commas): 
+							</label>
+							<input type="text" className="form-control" value={this.props.ingredients} onChange={this.handleIngChange} />
+						</div>
+						<input type="submit" value="Submit" className="btn btn-primary" />
+						<button className="btn btn-default" onClick={this.handleClose}>Close</button>
+					</form>
+				</div>
+			</div>
 		);
 	}
 }
