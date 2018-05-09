@@ -1,4 +1,6 @@
-This is  a recipe list written in React. It isn't yet stylized with CSS. The root parent component is ListContainer, and has two stateless child components for adding/editing recipes and displaying the existing recipes.
+This is  a recipe list written in React. 
+
+The root parent component is <ListContainer />, which has two stateless child components for adding/editing recipes, the <ChangeForm /> component, and displaying the existing recipes, the <TableList /> component.
 
 The final build can be found in the dist folder, which was bundled with Webpack.
 
